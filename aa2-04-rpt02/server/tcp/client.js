@@ -1,5 +1,5 @@
 // tcp client
-var net = require('net');
+var net = require("net");
 var port = 3000;
 var client = new net.Socket();
 
@@ -8,7 +8,7 @@ client.connect(port, "127.0.0.1");
 
 // Receive data from socket
 client.on("data", function (data){
-    console.log("Data " + data);
+    console.log("Data: " + data);
     client.destroy();
 });
 

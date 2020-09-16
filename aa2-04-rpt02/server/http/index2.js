@@ -1,15 +1,18 @@
+const { time } = require("console");
 // http server : index.js
 
 var http = require("http");
-port = 3000;
+port = 3003;
 
-var server = http.createServer(function(request,response) {
+var server = http.createServer((request,response)=> {
   response.writeHeader(200, {
     "Content-Type": "text/plain"
   });
   response.write("Hello HTTP server from node.js"); // WEB response
   response.write("\n");
-  response.end;
+  response.write("My ID is aa01\n");
+  console.log("Connected from client at" + new Date())
+  response.end();
 
 });
 

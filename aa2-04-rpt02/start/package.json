@@ -1,15 +1,14 @@
 {
   "name": "start",
   "version": "1.0.0",
-  "description": "start nod project",
-  "main": "index.js",
+  "description": "start node project",
+  "main": "hello.js",
   "scripts": {
-    "start": "node hello.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "test"
   ],
   "author": "aa04",
-  "license": "MIT"
+  "license": "ISC"
 }
