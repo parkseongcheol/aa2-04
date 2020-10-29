@@ -7,7 +7,7 @@
   <body>
     <h1>Data visualization : plotly.js</h1>
     <hr />
-    <h2>Time series by AA00</h2>
+    <h2>Time series by AA04</h2>
 
     <!-- Plotly chart will be drawn inside this DIV -->
     <div id="myDiv"></div>
@@ -139,6 +139,7 @@
       //var data = [ ts1 ];
 
       var layout = {
+        title: "lux time series by AA04",
         width: 750,
         height: 500,
         margin: {
@@ -148,8 +149,38 @@
           t: 100,
           pad: 4,
         },
-        xaxis: {},
-        yaxis: {},
+        xaxis: {
+          title: "data",
+          autorange: true,
+          range: ["2015-11-05 12:09:40.383", "2015-11-05 12:10:30.413"],
+          rangeselector: {
+            buttons: [
+              {
+                count: 10,
+                label: "10s",
+                step: "second",
+                stepmode: "backward",
+              },
+              {
+                count: 30,
+                label: "30s",
+                step: "second",
+                stepmode: "backward",
+              },
+              { step: "all" },
+            ],
+          },
+          rangeslider: {
+            range: ["2015-11-05 12:09:40.383", "2015-11-05 12:10:30.413"],
+          },
+          type: "date",
+        },
+        yaxis: {
+          autorange: true,
+          range: [86.8700008333, 138.870004167],
+          type: "linear",
+          title: "data: lux",
+        },
       };
 
       Plotly.newPlot("myDiv", data, layout);
