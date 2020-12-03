@@ -9,8 +9,9 @@
   "author": "aa00",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.15",
+    "mongoose": "^5.11.1",
     "serialport": "^9.0.1",
     "socket.io": "^2.3.0"
   }
